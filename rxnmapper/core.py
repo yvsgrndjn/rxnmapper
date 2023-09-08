@@ -71,7 +71,7 @@ class RXNMapper:
         self.logger = logger if logger else _logger
         self.model, self.tokenizer = self._load_model_and_tokenizer()
         # self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-        self.device  = "cpu" # disable and uncomment previous line if adequate gpu
+        self.device  = 'cpu' # disable and uncomment previous line if adequate gpu
         self.model.to(self.device)
 
     def _load_model_and_tokenizer(self) -> Tuple:
